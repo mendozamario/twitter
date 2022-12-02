@@ -63,6 +63,8 @@ app.layout = html.Div(
                                                     children = "Seguidos"
                                                 ),
                                                 html.P(
+                                                    className = "follow-number",
+                                                    id = "follow-number",
                                                     children = "235"
                                                 )
                                             ]
@@ -74,6 +76,8 @@ app.layout = html.Div(
                                                     children = "Seguidores"
                                                 ),
                                                 html.P(
+                                                    className = "followers-number",
+                                                    id = "followers-number",
                                                     children = "235"
                                                 )
                                             ]
@@ -85,6 +89,8 @@ app.layout = html.Div(
                                                     children = "Likes"
                                                 ),
                                                 html.P(
+                                                    className = "likes-number",
+                                                    id = "likes-number",
                                                     children = "235"
                                                 )
                                             ]
@@ -102,19 +108,23 @@ app.layout = html.Div(
 
 @app.callback(
     Output('screenname', 'children'),
+    Output('follow-number', 'children'),
+    Output('followers-number', 'children'),
+    Output('likes-number', 'children'),
     Input('search-button', 'n_clicks'),
     State('username-input', 'value')
 )
 def call_get_user(n_clicks, username):
-    response = validation.user_validation(username)
+    response = validation.user_validation(username) 
     database = DataBase()
-    if response == True :
-        user = database.select_user(username)
-    else : 
+    if response == False :
         user = twitter_data.get_user(username)
-        database.insert_user(user) 
+        database.insert_user(user)
     
-    return u'@{}'.format(username)
+    user = database.select_user(username)
+    print(user)
+
+    return u'@{}'.format(username), user[5], user[4], user[7]
 
 if __name__ == '__main__':
     app.run_server(debug=True)
