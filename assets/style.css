@@ -1,0 +1,98 @@
+.container {
+    text-align: center;
+    position: relative;
+}
+
+.navbar {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 0px auto;
+    position: relative;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin: 20px;
+    
+}
+
+.username-input {
+    width: 300px ;
+    height: 20px;
+    border-radius: 15px;
+    font-family: 'Georgia';
+    font-size: 16;
+    color: black;
+    border: none;
+    padding-left: 20px;
+    margin: 20px;
+    margin-left: 0;
+}
+
+.search-button {
+    width: 100px;
+    height: 30px;
+    background-color: rgb(29, 191, 242);
+    color: white;
+    font-weight: bold;
+    font-size: 50;
+    font-family: 'Arial';
+    align-content: center;
+    border-radius: 15px;
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 10px;
+    margin-left: 0;
+}
+
+.info-card {
+    border-color: black;
+    background-color: rgb(29, 191, 242);
+    width: 500px;
+    height: 265px;
+    border-radius: 15px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Georgia';
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.number-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.follow-card, .followers-card, .likes-card {
+    margin: 10px;
+    background-color: rgb(225, 232, 237);
+    padding: 20px;
+    border-radius: 15px;
+    width: 100px;
+    font-weight: bold;
+    font-size: 16;
+    font-family: 'Georgia';
+    text-align: center;
+    color: rgb(20, 23, 26);
+}
+
+hr {
+    color: white;
+}
+
+.download-img {
+    width: 50px;
+    height: 50px;
+}
+
+.download-button {
+    background: none;
+    border: none;
+    padding: 20px;
+    margin: 20px;
+}
