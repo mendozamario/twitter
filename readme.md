@@ -22,7 +22,7 @@ Crear base de datos.
 Para esto es necesario dirigirse al mysql command y ejecutar los siguientes comandos.
 ``CREATE DATABASE mys;``
 ``USE mys``
-``CREATE TABLE usuario (Id VARCHAR(100), username VARCHAR(100), screen_name VARCHAR(60), location VARCHAR(30), followers_count FLOAT, friends_count FLOAT, listed_count FLOAT, favourites_count FLOAT, statuses_count FLOAT, verified BOOL);´´
+```CREATE TABLE usuario (Id VARCHAR(100), username VARCHAR(100), screen_name VARCHAR(60), location VARCHAR(30), followers_count FLOAT, friends_count FLOAT, listed_count FLOAT, favourites_count FLOAT, statuses_count FLOAT, verified BOOL);´´´
 
 Para ejecutar este programa luego de realizar las correspondientes instalaciones es necesario ejecutar el siguiente
 comando desde la terminal.
