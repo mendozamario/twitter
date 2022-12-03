@@ -10,8 +10,8 @@ computadora, recuerde que este programa funciona en cualquier sistema operativo 
 - MySql
 - Cryptography
 
-Para instalar Python [link](https://www.python.org/downloads/)
-Para instalar MySql [link](https://www.mysql.com/downloads/)
+Para instalar [Python](https://www.python.org/downloads/)
+Para instalar [MySql](https://www.mysql.com/downloads/)
 
 ``pip install dash``
 ``pip install configparser``
