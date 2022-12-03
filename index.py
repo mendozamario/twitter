@@ -119,10 +119,11 @@ def call_get_user(n_clicks, username):
     database = DataBase()
     if response == False :
         user = twitter_data.get_user(username)
+        user_data = twitter_data.get_user(username)
         database.insert_user(user)
+        database.insert_data(user_data)
     
     user = database.select_user(username)
-    print(user)
 
     return u'@{}'.format(username), user[5], user[4], user[7]
 

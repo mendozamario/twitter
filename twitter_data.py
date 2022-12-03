@@ -18,3 +18,11 @@ api = tweepy.API(authentication, parser=tweepy.parsers.JSONParser())
 
 def get_user(username):
     return api.get_user(screen_name=username)
+
+def get_user_timeline(username):
+    data = []
+
+    for tweet in tweepy.Cursor(api.user_timeline, screen_name = username, exclude_replies = True, include_rts = False, tweet_mode = 'extended').items():
+        data.append([username, tweet.full_text, tweet.favourite_count, tweet.retweet_count])
+    
+    return data

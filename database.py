@@ -48,4 +48,7 @@ class DataBase:
         except Exception as e:
             raise
         
+    def insert_data(self, data):
+        sql = "INSERT INTO user_data (username, text, favourite_count, retweet_count) VALUES (%s, %s, %s, %s)"
+        values = (data[0], data[1], data[2], data[3])
     
