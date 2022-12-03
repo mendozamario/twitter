@@ -99,6 +99,14 @@ app.layout = html.Div(
                                 )
                             ]
                         ),
+                        html.Div(
+                            className = "graphs",
+                            children = [
+                                html.Img(
+                                    src = "https://c382.pcloud.com/dpZVfMS2wZNLGiV3ZS7m87ZZ7TaPc7Z3VZZjARZZtaIC8NGFikVi9PaSRO1l1pd73tqk/pastel.png"
+                                )
+                            ]
+                        )
                     ]
                 )
             ]
@@ -119,9 +127,9 @@ def call_get_user(n_clicks, username):
     database = DataBase()
     if response == False :
         user = twitter_data.get_user(username)
-        user_data = twitter_data.get_user(username)
+        #user_data = twitter_data.get_user_timeline(username)
         database.insert_user(user)
-        database.insert_data(user_data)
+        #database.insert_data(user_data)
     
     user = database.select_user(username)
 
@@ -129,4 +137,3 @@ def call_get_user(n_clicks, username):
 
 if __name__ == '__main__':
     app.run_server(debug=True)
-

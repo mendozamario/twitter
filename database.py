@@ -41,7 +41,6 @@ class DataBase:
         values = (user["id_str"], user["name"], user["screen_name"], user["location"], user["followers_count"], user["friends_count"], user["listed_count"], user["favourites_count"], user["statuses_count"], user["verified"])
 
         try:
-            print("hola, estoy funcionando")
             self.cursor.execute(sql, values)
             self.connection.commit()
 
@@ -49,6 +48,13 @@ class DataBase:
             raise
         
     def insert_data(self, data):
+        print(data[0])
         sql = "INSERT INTO user_data (username, text, favourite_count, retweet_count) VALUES (%s, %s, %s, %s)"
         values = (data[0], data[1], data[2], data[3])
     
+        try:
+            self.cursor.execute(sql, values)
+            self.connection.commit()
+
+        except Exception as e:
+            raise
